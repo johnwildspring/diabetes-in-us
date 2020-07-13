@@ -2,7 +2,6 @@
 import { jsx } from 'theme-ui';
 
 export const HoverValue = ({ value }) => {
-    console.log(value, value?.properties);
     return <div sx={{
         position: 'fixed',
         top: '10px',

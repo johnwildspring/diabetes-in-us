@@ -32,10 +32,29 @@ export const MapComponent = ({ hovered, setHover }) => {
             width: '100vw'
         }}
         onMouseMove={changeHover}
+        onSourceData={(map) => {
+            const { layers } = map.getStyle();
+            // console.log(layers);
+            const firstSymbol = layers.find(({ type }) => type === 'symbol');
+            const allOurLayers = [
+                'diabetes-us',
+                'hovered-outline',
+                'hovered-shadow'
+            ].map(ea => layers.find(({id}) => id === ea));
+            if (allOurLayers.every(ea => !!ea)) {
+                allOurLayers.forEach(ea => {
+                    map.moveLayer(ea.id, firstSymbol.id);
+                });
+            }    
+        }}
     >
         <Source id="diabetes-us" tileJsonSource={{
             type: 'vector',
             url: `mapbox://johnwildspring.diabetes-us`
+        }} />
+        <Source id="hovered" geoJsonSource={{
+            type: 'geojson',
+            data: hovered
         }} />
         <Layer type="fill" id="diabetes-us" paint={{
             'fill-color': [
@@ -51,5 +70,25 @@ export const MapComponent = ({ hovered, setHover }) => {
                 0.7,
             ]              
         }} sourceId="diabetes-us" sourceLayer="diabetes-us" />
+        <Layer
+            id="hovered-outline"
+            sourceId="hovered"
+            type="line"
+            paint={{
+                "line-color": "#FFFFFF",
+                "line-width": 2
+            }}
+        />
+        <Layer 
+            id="hovered-shadow"
+            sourceId="hovered"
+            type="line"
+            paint={{
+                "line-color": "#FFFFFF",
+                "line-width": 10,
+                "line-blur": 10,
+                "line-opacity": 1
+            }}
+        />
     </Map>;
 };
