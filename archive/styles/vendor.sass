@@ -1,0 +1,23 @@
+@import mixins
+
+// Mapbox
+@import '~mapbox-gl/dist/mapbox-gl.css'
+
+.mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-attrib
+	display: none
+
+.mapboxgl-control-container
+	> *
+		width: 100%
+
+#PlacesAutocomplete__autocomplete-container
+	z-index: 1000000
+
+#PlacesAutocomplete__root
+	display: inline-block
+	width: 100%
+	input::placeholder
+		color: $medgrey2
+
+div#PlacesAutocomplete__root .spacer-bottom-1
+    margin-bottom: 0 !important

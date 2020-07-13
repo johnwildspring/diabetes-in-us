@@ -1,0 +1,32 @@
+.Close
+	.CloseButton
+		position: relative
+		width: 32px
+		height: 32px
+		cursor: pointer
+		opacity: 0.7
+	
+		@for $i from 1 through 32
+			&.size-#{$i}
+				height: 1px * $i !important
+				width: 1px * $i !important
+				&:before, &:after
+					height: 1px * $i !important
+
+	.CloseButton:hover
+		opacity: 1
+
+	.CloseButton:before, .CloseButton:after
+		position: absolute
+		left: 50%
+		content: ' '
+		height: 32px
+		width: 2px
+		background-color: #333
+
+	.CloseButton:before
+		transform: rotate(45deg)
+
+	.CloseButton:after
+		transform: rotate(-45deg)
+

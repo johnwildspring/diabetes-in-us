@@ -1,0 +1,20 @@
+@import '../mixins'
+
+// A Tag is a type of inline text element that generally exists in a list. For example, a list of search keywords, or a list of selections.
+// It is composed of a rectangle with soft corners, a solid or transparent fill, and an X element to remove itself from a list.
+
+.Tag
+	background: transparent
+	border: 1px solid $darkgrey
+	border-radius: 2px
+	color: $darkgrey
+	padding: 0.25rem
+	cursor: pointer
+	display: inline-block
+	&:hover
+		font-weight: bold
+	&.big
+		font-size: 1.25rem
+		padding: 0.5rem
+	&:not(:first-child)
+		margin-left: 0.5rem

@@ -1,0 +1,19 @@
+.Steps
+	text-shadow: 2px 2px 10px white
+	padding: 1.5rem 1rem
+	box-sizing: border-box
+	.Step
+		opacity: 0.5
+		h4
+			margin-bottom: 0
+		&.active
+			opacity: initial
+			h4
+				margin-bottom: 0.5rem
+		.Instructions
+			height: 0
+			opacity: 0
+			transition: height 0.4s, opacity 0.4s
+			&.active
+				height: initial
+				opacity: initial

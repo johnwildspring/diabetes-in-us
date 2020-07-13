@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="39px" viewBox="0 0 28 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M17.0699666,2.92945423 C13.1640886,-0.976484742 6.83628636,-0.976484742 2.92940845,2.92945423 C-0.976469485,6.83339323 -0.976469485,13.1672943 2.92940845,17.0702333 C2.92940845,17.0702333 9.99518764,24.000125 9.99518764,32 C9.99518764,24.000125 17.0689666,17.0702333 17.0689666,17.0702333 C20.9768445,13.1672943 20.9768445,6.83339323 17.0699666,2.92945423 Z M9.99618761,14.0052812 C7.78925658,14.0052812 6.00031249,12.2163091 6.00031249,10.0053437 C6.00031249,7.79437821 7.78925658,6.00540617 9.99618761,6.00540617 C12.2111184,6.00540617 14.0000625,7.79437821 14.0000625,10.0053437 C14.0000625,12.2163091 12.2111184,14.0052812 9.99618761,14.0052812 Z" id="path-1"></path>
+        <filter x="-30.0%" y="-18.8%" width="160.0%" height="137.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.149019608   0 0 0 0 0.274509804   0 0 0 0 0.874509804  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pin" transform="translate(4.000000, 3.000000)" fill-rule="nonzero">
+            <g id="Shape">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#2646DF" xlink:href="#path-1"></use>
+            </g>
+            <ellipse id="Oval" stroke="#2646DF" cx="10" cy="31" rx="10" ry="2"></ellipse>
+        </g>
+    </g>
+</svg>

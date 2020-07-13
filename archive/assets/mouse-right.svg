@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Mouse</title>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="mouse">
+            <polygon id="Shape" points="0 0 48 0 48 48 0 48"></polygon>
+            <path d="M26,2.14 L26,18 L40,18 C40,9.84 33.89,3.12 26,2.14 Z" id="Right" fill="#FBF879" fill-rule="nonzero"></path>
+            <path d="M8,30 C8,38.84 15.16,46 24,46 C32.84,46 40,38.84 40,30 L40,22 L8,22 L8,30 Z" id="Bottom" fill="#000000" fill-rule="nonzero"></path>
+            <path d="M22,2.14 C14.11,3.12 8,9.84 8,18 L22,18 L22,2.14 Z" id="Left" fill="#000000" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

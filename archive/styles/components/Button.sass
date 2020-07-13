@@ -1,0 +1,29 @@
+@import '../mixins'
+
+// A Button is an element that allows the user to trigger an event or navigate to a different route.
+// It is composed of a rectangle with soft corners, with a solid or transparent fill, and text on the inside.
+
+.Button
+	font-family: 'Arimo', Helvetica, Arial, sans-serif
+	background: transparent
+	font-size: 1rem
+	color: $royalblue
+	outline: none
+	border: 1px solid $royalblue
+	border-radius: 4px
+	padding: 0.5rem
+	min-width: 100px
+	cursor: pointer
+	transition: background 0.2s
+	&.Primary
+		background: $royalblue
+		color: $white
+		&:hover
+			background: $persianblue
+	&.inactive
+		background: transparent
+		border-color: $darkgrey
+	&.Danger
+		background: $redribbon
+		color: $white
+		border: none
