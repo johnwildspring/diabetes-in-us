@@ -1,14 +1,14 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
-export const HoverValue = value => {
+export const HoverValue = ({ value }) => {
+    console.log(value, value?.properties);
     return <div sx={{
         position: 'fixed',
         top: '10px',
         width: '100vw'
     }}>
-
-        <div sx={{
+        {value && value.properties && <div sx={{
             margin: '0 auto',
             width: '200px',
             background: 'white',
@@ -18,22 +18,12 @@ export const HoverValue = value => {
             flexDirection: 'column'
         }}>
             <p sx={{
+                marginTop: 0,
                 textAlign: 'center'
-            }}>Hovered County</p>
-            <div sx={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-            }}>
-                {/* <span>{start}%</span>
-                <div sx={{
-                    background: 'linear-gradient(90deg, rgba(71,255,60,1) 0%, rgba(119,61,255,1) 100%)',
-                    width: '100px',
-                    flexGrow: 1,
-                    marginX: '8px'
-                }}></div>
-                <span>{end}%</span> */}
-            </div>
-        </div>
+            }}>{value.properties.County}</p>
+            <span sx={{
+                textAlign: 'center'
+            }}><b>Percentage:</b> {value.properties.percentage}%</span>
+        </div>}
     </div>
 }

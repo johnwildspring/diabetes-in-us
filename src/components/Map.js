@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import { useState } from 'react';
 import { jsx } from 'theme-ui';
 import ReactMapboxGl, { Layer, Source } from 'react-mapbox-gl';
 
@@ -6,16 +7,31 @@ const Map = ReactMapboxGl({
     accessToken: process.env.REACT_APP_MAPBOX_PUBLIC_TOKEN
 });
 
-export const MapComponent = () => {
+export const MapComponent = ({ hovered, setHover }) => {
+    const [ center ] = useState([-104.984, 51.558]);
+    const [ zoom ] = useState([2.35]);
+
+    const changeHover = (map, event) => {
+        const { point } = (event || {});
+
+        const [ feature ] = map
+            .queryRenderedFeatures(point, { layers: ['diabetes-us'] });
+
+        if (feature?.properties?.CountyFIPS !== hovered?.properties?.CountyFIPS) {
+            setHover(feature || null);
+        }
+    };
+
     return <Map
         // eslint-disable-next-line react/style-prop-object
         style='mapbox://styles/mapbox/light-v9'
-        center={[-104.984, 51.558]}
-        zoom={[2.35]}
+        center={center}
+        zoom={zoom}
         containerStyle={{
             height: '100vh',
             width: '100vw'
         }}
+        onMouseMove={changeHover}
     >
         <Source id="diabetes-us" tileJsonSource={{
             type: 'vector',
